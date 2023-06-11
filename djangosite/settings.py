@@ -24,9 +24,9 @@ with open('./API.txt', 'r') as key:
     SECRET_KEY = key.read()
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['127.0.0.1']
+ALLOWED_HOSTS = []
 
 
 # Application definition

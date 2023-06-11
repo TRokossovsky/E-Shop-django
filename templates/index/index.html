@@ -7,7 +7,7 @@
     <title>ChaRyi | Online shopping</title>
     <meta name="description" content="Shop main page">
     <meta name="keywords" content="Shop, Online shop, E-Shop, Shopping">
-    <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/index.css' %}">
     <script src="{% static 'js/main.js' %}"></script>
     <script src="{% static 'vendor/js/jquery-3.6.4.slim.min.js' %}"></script>
 </head>
@@ -16,7 +16,7 @@
     </div>
     <header>
         <button class="aside-buttons" onclick="Aside()"><img src="{% static 'images/align-left.svg' %}"></button>
-        <a href=""><h1>ChaRyi</h1></a>
+        <a href="/"><h1>ChaRyi</h1></a>
         <nav>
             <form id="validation" action="#" method="post">
                 <input type="text" placeholder="Login" name="username" value="">
@@ -24,7 +24,7 @@
                 <button type="submit" id="submit-button">Log In</button>
             </form>
             <ul>
-                <li><a href="index">Home</a></li>
+                <li><a href="/">Home</a></li>
                 <li><a href="about">About</a></li>
                 <li><a href="help">Help</a></li>
                 <li><a href="contactUs">Contact us</a></li>
@@ -75,11 +75,11 @@
         </ul>
     </aside>
     <main>
-        {% for product in products|slice:":4" %}
+        {% for product in products|slice:":50" %}
     <div class="Products">
         <h2>{{ product.product_name }}</h2>
-        <p>Price: {{ product.product_price }} euros</p>
-        <p>Description: {{ product.product_desc }}</p>
+        <h3>{{ product.product_price }} euros</h3>
+        <h4>{{ product.product_desc }}</h4>
 		<img src="{{ product.product_image.url }}" alt="Product image">
     </div>
 		{% endfor %}

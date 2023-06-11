@@ -1,3 +1,5 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,16 +7,16 @@
     <title>ChaRyi | Online shopping: About</title>
     <meta name="description" content="Shop main page">
     <meta name="keywords" content="Shop, Online shop, E-Shop, Shopping">
-    <link rel="stylesheet" href="css/main.css">
-    <script src="js/main.js"></script>
-    <script src="vendor/js/jquery-3.6.4.slim.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
+    <script src="{% static 'js/main.js' %}"></script>
+    <script src="{% static 'vendor/js/jquery-3.6.4.slim.min.js' %}"></script>
 </head>
 <body>
     <noscript>Enable JS in your browser.</noscript>
     </div>
     <header>
-        <button class="aside-buttons" onclick="Aside()"><img src="images/align-left.svg"></button>
-        <a href="index.html"><h1>ChaRyi</h1></a>
+        <button class="aside-buttons" onclick="Aside()"><img src="{% static 'images/align-left.svg' %}"></button>
+        <a href="/"><h1>ChaRyi</h1></a>
         <nav>
             <form id="validation" action="#" method="post">
                 <input type="text" placeholder="Login" name="username" value="">
@@ -22,11 +24,11 @@
                 <button type="submit" id="submit-button">Log In</button>
             </form>
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="help.html">Help</a></li>
-                <li><a href="contactUs.html">Contact us</a></li>
-                <li><a href="catalogue.html">Catalogue</a></li>
+                <li><a href="/">Home</a></li>
+                <li><a href="about">About</a></li>
+                <li><a href="help">Help</a></li>
+                <li><a href="contactUs">Contact us</a></li>
+                <li><a href="catalogue">Catalogue</a></li>
             </ul>
         </nav>
     </header>
@@ -40,7 +42,7 @@
                 <li>Coats</li>
                 <li>Shoes</li>
                 <li>Accessories</li>
-                <button class="accs-buttons" onclick="Accs()"><img src="images/align-left.svg"></button>
+                <button class="accs-buttons" onclick="Accs()"><img src="{% static 'images/align-left.svg' %}"></button>
                 <ul class="accs">
                     <li>Socks</li>
                     <li>Hats</li>
@@ -60,7 +62,7 @@
                 <li>Coats</li>
                 <li>Shoes</li>
                 <li>Accessories</li>
-                <button class="accs-buttons" onclick="Accs()"><img src="images/align-left.svg"></button>
+                <button class="accs-buttons" onclick="Accs()"><img src="{% static 'images/align-left.svg' %}"></button>
                 <ul class="accs">
                     <li>Socks</li>
                     <li>Hats</li>
@@ -83,23 +85,23 @@
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt quae sequi ipsa unde fugit tenetur, molestias cupiditate necessitatibus repellat ad est, nobis aut dignissimos doloribus voluptatem voluptatum laudantium enim minus!</p>
         </div>
         <div>
-            <img src="images/owner.jpg" alt="Our dear owner">
+            <img src="{% static 'images/owner.jpg' %}" alt="Our dear owner">
             <span>Our immortal owner</span>
         </div>
     </main>
     <footer>
         <div><p>Account</p>
             <ul>
-                <li><a href="login.html">Log in</a></li>
-                <li><a href="register.html">Sign up</a></li>
-                <li><a href="redeem.html">Redeem a Promocode</a></li>
+                <li><a href="login">Log in</a></li>
+                <li><a href="register">Sign up</a></li>
+                <li><a href="redeem">Redeem a Promocode</a></li>
             </ul>
         </div>
         <div><p>Company</p>
             <ul>
-                <li><a href="about.html">About</a></li>
-                <li><a href="international.html">International</a></li>
-                <li><a href="accessibility.html">Accessibility</a></li>
+                <li><a href="about">About</a></li>
+                <li><a href="international">International</a></li>
+                <li><a href="accessibility">Accessibility</a></li>
             </ul>
         </div>
         
