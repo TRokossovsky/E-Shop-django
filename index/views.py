@@ -1,15 +1,16 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from .forms import UserRegistrationForm
 from .models import Product
 
 
 def index(request):
-    products = Product.objects.all()
-    return render(request, 'index/index.html', {'products': products})
+
+    return render(request, 'index/index.html')
 
 
 def catalogue(request):
-    return render(request, 'index/catalogue.html')
+    products = Product.objects.all()
+    return render(request, 'index/catalogue.html', {'products': products})
 
 
 def about(request):
@@ -21,7 +22,7 @@ def register(request):
         form = UserRegistrationForm(request.POST)
         if form.is_valid():
             form.save()
-            return render(request, 'index/login.html')
+            return render(request, 'index/catalogue.html')
     else:
         form = UserRegistrationForm()
     return render(request, 'index/register.html', {'form': form})

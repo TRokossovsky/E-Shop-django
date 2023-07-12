@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@300;400;500;600;700;800;900&display=swap');
+
+
+
+
+@media (min-width: 120px){
+    body {
+        background-image: url("../images/background-mobile.png");
+        background-repeat: repeat;
+        background-size: 50%;
+        font-family: 'Red Hat Display', sans-serif;
+        margin: 0px;
+        user-select: none;
+    }
+    
+    header div svg, header div svg image {
+        width: 100%;
+    }
+    
+    header input {
+        border-radius: 20px;
+        background-color: rgb(225, 225, 225);
+        position: relative;
+        left: 1515px;
+        top: -78px;
+        width: 515px;
+        height: 38px;
+        font-size: 30px;
+        color: #282828;
+        font-weight: 100;
+        text-indent: 10px;
+        outline: none;
+    }
+
+    header input::placeholder {
+        color: black;
+        font-size: 24px;
+        font-weight: 200;
+    }
+    header div img {
+        position: absolute;
+        top: 17px;
+        left: 17px;
+        z-index: 1;
+    }
+
+.search-tab input[type="image"] {
+    all: unset;
+    position: absolute;
+    left: 1994px;
+    top: 40px;
+}
+
+nav ul{
+    list-style: none;
+    display: flex;
+    position: absolute;
+    right: 700px;
+    top: -50px;
+    font-size: 60px;
+    font-weight: 500;
+    color: #e1e1e1;
+    justify-content: space-between;
+}
+
+nav ul li:hover {
+    color: #cacaca;
+}
+
+nav ul li {
+    margin-right: 28px;
+}
+main #login-layout {
+    border-radius: 36px;
+    background-color: rgb(40, 40, 40);
+    position: relative;
+    width: 406px;
+    height: 791px;
+    left: 747px;
+}
+#login-inner {
+
+    font-weight: 100;
+    position: relative;
+    left: -2px;
+    top: -5px;
+    border-radius: 26px;
+    background-color: rgb(225, 225, 225);
+    width: 380px;
+    height: 758px;
+    z-index: 4;
+
+}
+#submit-button {
+    border: none;
+    background-color: #282828;
+    position: absolute;
+    bottom: 40px;
+    left: 20px;
+    width: 340px;
+    height: 45px;
+    box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.61);
+    font-weight: 100;
+    font-size: 35px;
+    color: #e1e1e1;
+    padding-bottom: -40px;
+
+}
+#submit-button:hover {
+    box-shadow: 1px 1px 15px rgba(0, 0, 0, 1);
+}
+
+
+#reg-form {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    left: 15px;
+    top: 20px;
+    text-indent: -20px;
+    text-align: center;
+}
+#reg-form input{
+    outline: none;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 7px;
+    width: 346px;
+    height: 36px;
+    position: relative;
+    top: 23px;
+    font-size: 25px;
+    color: #282828;
+
+}
+    span {
+        position: relative;
+        top: -3px;
+    }
+label{
+    position: relative;
+    top: 20px;
+    font-size: 36px;
+}
+
+main #down-nav {
+    list-style: none;
+    display: flex;
+    position: absolute;
+    right: 20px;
+    top: 105px;
+}
+
+main #down-nav li:first-of-type {
+    position: relative;
+    top: -5px;
+}
+
+footer {
+    position: relative;
+    height: 200px;
+    bottom: -150px;
+    margin: 0px;
+    background-color: #282828;
+}
+footer ul {
+    list-style: none;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    font-size: 40px;
+    color: #e1e1e1;
+    top: 65px;
+    right: 0px;
+    font-weight: 100;
+    text-shadow: 0px 2px 0.84px rgba(0, 0, 0, 1);
+}
+
+footer ul li:hover {
+    text-shadow: 3px 3px 10px rgb(0, 0, 0)
+}
+
+footer ul li {
+    margin-top: -40px;
+    margin-right: 271px;
+}
+footer ul:nth-child(2) li:nth-child(2) {
+    margin-left: 23px;
+}
+#language-switcher {
+    all: unset;
+    position: absolute;
+    top: 50px;
+    left: 275px;
+}
+}

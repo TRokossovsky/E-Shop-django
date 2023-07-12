@@ -1,33 +1,75 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>ChaRyi | Online shopping: Catalogue</title>
-    <meta name="description" content="Catalogue">
-    <meta name="keywords" content="Shop, Online shop, E-Shop, Shopping, Catalogue">
-    <link rel="stylesheet" href="css/main.css">
-    <script src="js/main.js"></script>
-    <script src="vendor/js/jquery-3.6.4.slim.min.js"></script>
+    <title>ChaRyi | Catalogue</title>
+    <meta name="description" content="Shop main page">
+    <meta name="keywords" content="Shop, Online shop, E-Shop, Shopping">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/catalogue.css' %}">
+    <script src="{% static 'js/index.js' %}"></script>
+    <script src="{% static 'vendor/js/jquery-3.6.4.slim.min.js' %}"></script>
 </head>
 <body>
-    <noscript>Enable JS in your browser.</noscript>
     <header>
-        
+        <div>
+        <svg
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            width="1920px" height="106px">
+            <image xlink:href="data:img/png;base64,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" />
+        </svg>
+        <img src="{% static 'images/logo.png' %}" alt="Logo" onclick="window.location.href = '/';">
+        </div>
+        <nav>
+            <ul>
+                <li onclick="window.location.href = '/catalogue';">Catalogue</li>
+                <li onclick="window.location.href = '/account';">Account</li>
+            </ul>
+        </nav>
+        <div id="language-switcher">
+            <img src="{% static 'images/UKflag.png' %}" alt="UKflag">
+        </div>
+        <div class="search-tab">
+            <form action="catalogue.html" method="POST">
+                <input type="text" placeholder="What do you feel for today?">
+                <input type="image" src="{% static 'images/magnifier.png' %}" alt="Magnifier">
+            </form>
+        </div>
     </header>
     <main>
-        <div>
-            <h2>Catalogue</h2>
-            <p>Sort by:</p>
-            <input type="radio" id='Sort_price'>
-            <label for="Sort_price">Price</label>
-            <input type="radio" id='Sort_relevant'>
-            <label for="Sort_relevant">Relevant</label>
-            <input type="radio" id='Sort_date'>
-            <label for="Sort_date">Date</label>
-        </div>
+        <ul id="down-nav">
+            <li>
+                <img src="{% static 'images/compare.png' %}" alt="Comparison icon">
+            </li>
+            <li>
+                <img src="{% static 'images/cart.png' %}" alt="Cart icon">
+            </li>
+        </ul>
+        <ul class="items">
+        {% for product in products|slice:":18" %}
+            <li>
+                <div class="items-main-block">
+                    <div class="inner-items">
+                        <div class="items-text">
+                            <h2>{{ product.product_name }}</h2>
+                            <h3>${{ product.product_price }}</h3>
+                        </div>
+                    </div>
+                </div>
+            </li>
+		{% endfor %}
+        </ul>
     </main>
     <footer>
-
+        <ul>
+            <li onclick="window.location.href = '/register';">Sign up</li>
+            <li onclick="window.location.href = '/login';">Login</li>
+        </ul>
+        <ul>
+            <li onclick="window.location.href = '/about';">About</li>
+            <li onclick="window.location.href = '/contact';">Contact Us</li>
+        </ul>
     </footer>
 </body>
 </html>
